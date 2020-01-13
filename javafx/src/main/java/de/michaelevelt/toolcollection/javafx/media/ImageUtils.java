@@ -13,7 +13,7 @@ public class ImageUtils {
 
 	private static final String FILE_FORMAT = "png";
 
-	public Image readImage(byte[] bytes) throws IOException {
+	public static Image readImage(byte[] bytes) throws IOException {
 
 		if (bytes == null) {
 			return null;
@@ -23,13 +23,13 @@ public class ImageUtils {
 		return SwingFXUtils.toFXImage(bufferedImage, null);
 	}
 
-	public byte[] readFileAsByteArray(String fileName) throws IOException {
+	public static byte[] readFileAsByteArray(String fileName) throws IOException {
 
 		if (StringUtils.isBlank(fileName)) {
 			return null;
 		}
 
-		InputStream inputStream = getClass().getClassLoader().getResourceAsStream(fileName);
+		InputStream inputStream = ImageUtils.class.getClassLoader().getResourceAsStream(fileName);
 		if (inputStream == null) {
 			return null;
 		}
@@ -42,7 +42,7 @@ public class ImageUtils {
 		return bytes;
 	}
 
-	public byte[] byteArrayFromImageView(ImageView imageView) throws IOException {
+	public static byte[] byteArrayFromImageView(ImageView imageView) throws IOException {
 		if (imageView == null || imageView.getImage() == null) {
 			return null;
 		}

@@ -12,8 +12,6 @@ public class AlertHandler {
 
 	private final Alert alert;
 
-	private ImageUtils imageUtils = new ImageUtils();
-
 	private static final Logger LOGGER = LogManager.getLogger(AlertHandler.class);
 
 	public AlertHandler(String title, String headerText, Alert.AlertType alertType, byte[] logoImage) {
@@ -22,7 +20,7 @@ public class AlertHandler {
 		Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
 		if (logoImage != null) {
 			try {
-				stage.getIcons().add(imageUtils.readImage(logoImage));
+				stage.getIcons().add(ImageUtils.readImage(logoImage));
 			} catch (IOException e) {
 				LOGGER.error("An error occurred while trying to set the icon for the alert dialogue.");
 			}

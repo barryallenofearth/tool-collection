@@ -7,7 +7,7 @@ import java.io.File;
 
 public class SoundUtils {
 
-	public void playAuswertungSound(String fileName) {
+	public static void playAuswertungSound(String fileName) {
 		File soundFile = new File(fileName);
 		if (soundFile.isFile()) {
 			Platform.runLater(() -> {

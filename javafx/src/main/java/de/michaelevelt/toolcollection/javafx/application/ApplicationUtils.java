@@ -1,9 +1,9 @@
 package de.michaelevelt.toolcollection.javafx.application;
 
-import javafx.stage.Stage;
+import java.io.IOException;
 
 public interface ApplicationUtils {
 
-	BaseController initStage(Stage stage, String title, int xPixel, int yPixel,BaseController... controllers);
-	
+	BaseController initStage(int xPixel, int yPixel, byte[] logoImage) throws IOException;
+
 }
