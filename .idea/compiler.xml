@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="database" />
         <module name="javafx" />
+        <module name="html" />
       </profile>
     </annotationProcessing>
   </component>

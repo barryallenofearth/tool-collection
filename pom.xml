@@ -22,6 +22,7 @@
     <modules>
         <module>database</module>
         <module>javafx</module>
+        <module>html</module>
     </modules>
 
     <dependencies>
